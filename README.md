@@ -8,7 +8,19 @@ for activity recognition classification.
 
 `activityrec.ipynb`
 
-``
+
+
+
+`meta_and_raw_data.ipynb`
+1. `meta_and_raw_data_functions.py` has the functions that the notebook needs and
+it is called in the notebook.
+1. Summary:
+    1. Loads pickle files for healthy controls
+    1. Unstacks the nested dictionary data structure of the raw data
+    1. Adds meta data columns to the raw data.
+    1. Saves as pickle files by subject in the `.\biostamp_data\meta_and_raw_data` directory
+1. Once the features are created, the feature matrix can be added to this matrix then used 
+for machine learning models.
 
 
 
