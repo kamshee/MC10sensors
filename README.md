@@ -1,6 +1,9 @@
 This folder contains scripts and notebooks to process healthy control MC10 sensor data
 for activity recognition classification.
 
+Note:
+- HC01 and HC02 datasets had battery issues so data is missing compared to the other datasets.
+
 `requirements.txt`
 1. List of package and version requirments that need to be installed to run scripts.
 1. To install dependencies run: `pip install -r requirements.txt`
