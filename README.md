@@ -41,11 +41,9 @@ features. I've translated it into Python and tested in the notebook.
 This will make it easier to load into ML models.
 
 
-Remove
-```
-PreprocessFcns.py
+
+`PreprocessFcns.py` - You can ignore this. This was to be used for the sliding window
+feature generation.
 - clip generating function (gen_clips)
 - 37 feature extraction function (feature_extraction)
 - includes high, band, low pass filters
-
-```
