@@ -2,6 +2,9 @@ Notes on Joe's files
 Updated 2/28/19
 
 1. MC10 sensor project for CVA
+Relevant files should be here: \\FS2.smpp.local\Lab Members\JoeL
+All Python notebooks and relevant files should be in the GitHub directory here:
+    \\FS2.smpp.local\Lab Members\JoeL\GitHub
 
 GitHub repo
 https://github.com/kamshee/MC10sensors
@@ -18,12 +21,21 @@ https://github.com/kamshee/MC10sensors
     Pipeline objects, hyperparameter tuning with cross validation, splitting train/test
     datasets, scoring, predicting, and reporting. The current plan is to use autosklearn
     to build and test different ML models.
-`` directory
+`computervision` directory - Includes Ami's Matlab scripts using computer vision for
+    signal processing and preparing for better feature engineering. We may apply DTW
+    after. The 131 features from Megan may also be used later on to plug into the ML
+    models. It'll depend on the results.
+    Note the path on drive: \\FS2.smpp.local\Inpatient Sensors -Stroke\Data analysis
 
 #########################################################################################
 
 2. CIS-PD - Michael J Fox Foundation (MJFF) project with Apple watch and MC10 sensors
-
+All Python notebooks and relevant files should be in the GitHub directory here:
+    \\FS2.smpp.local\Lab Members\JoeL\GitHub
+`CIS-PD_Curation` directory has the code that Nick and I shared.
+`CIS-PD_Curation-kamshee` directory has the code that I worked on.
+Ignore the `CIS-PD_Curation2` directory
+Nick Shawen should have the updated code in the repo and shared drive.
 
 #########################################################################################
 
@@ -42,3 +54,10 @@ Notes from last meeting with Ami Drory:
 - Discussed using CVA trained model to predict CVA classification/scoring for things 
     like activity recognition.
   
+#########################################################################################
+
+Other notes:
+1. All files should be in my folder. The path is: \\FS2.smpp.local\Lab Members\JoeL
+1. The `activity_recognition_process` is an older directory. I changed the name to
+`activity_recognition`, and then finally `MC10sensors`.
+1. 
