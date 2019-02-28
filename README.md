@@ -1,5 +1,7 @@
 This folder contains scripts and notebooks to process healthy control MC10 sensor data
-for activity recognition classification.
+for activity recognition classification. I've worked to improve documentation for the
+code, modularized most functions for easy debugging, and hope that it will be easily
+modifiable to different parts of the MC10 study. Happy coding! - Joe Lee
 
 Note:
 - HC01 and HC02 datasets had battery issues so data is missing compared to the other datasets.
@@ -8,13 +10,18 @@ Note:
 1. List of package and version requirments that need to be installed to run scripts.
 1. To install dependencies run: `pip install -r requirements.txt`
 1. To create new dependencies file run in correct directory: `pip freeze > requirements.txt`
+1. If using Anaconda, don't use the pip method.
 
-`activityrec.ipynb`
+`1_data_extract.ipynb`
+1. Requires `data_extract_functions.py` for functions.
+1. Extracts raw data from health controls (HC), creates a nested dictionary structure,
+and saves as a pickle file for each subject.
+1. Some of the data is explored and visualized for activity recognition.
+1. At the end, there is some code for clipping and sliding windows. This can be ignored.
+It was an earlier idea, but we decided to use Ami's Matlab pipeline to segment the gait
+cycles and possibly use DTW (dynamic time warping) to get better features.
 
-
-
-
-`meta_and_raw_data.ipynb`
+`2_meta_and_raw_data.ipynb`
 1. `meta_and_raw_data_functions.py` has the functions that the notebook needs and
 it is called in the notebook.
 1. Summary:
@@ -25,8 +32,13 @@ it is called in the notebook.
 1. Once the features are created, the feature matrix can be added to this matrix then used 
 for machine learning models.
 
-
-
+`3_131_features.ipynb`
+1. `131_features.py` contains all the functions from the notebook. They are here for
+quick reference instead of going through the whole notebook.
+1. This notebook converts the Matlab code from Megan's previous project using the 131
+features. I've translated it into Python and tested in the notebook.
+1. I've created functions to append the features to the meta and raw data matrix.
+This will make it easier to load into ML models.
 
 
 Remove
@@ -36,16 +48,4 @@ PreprocessFcns.py
 - 37 feature extraction function (feature_extraction)
 - includes high, band, low pass filters
 
-TestFeatures.ipynb
-- input: activity dictionary
-- use gen_clips
-- use feature_extraction
-- check 'features'
-
-data structure of clipped data
-- using nested dictionary: example[trial][sensor]
-  - trial: 0, 1, etc
-  - sensor: accel, gyro
-  - data
-  - clip_len
 ```
