@@ -1,0 +1,44 @@
+Notes on Joe's files
+Updated 2/28/19
+
+1. MC10 sensor project for CVA
+
+GitHub repo
+https://github.com/kamshee/MC10sensors
+`dump` directory - Dumped code here instead of deleting.
+    Tested some things like HC01 and HC02 (which had battery issues and 
+    missing data), clipping and aggregating functions (later decided we were not 
+    going to clip and do sliding windows and get features from them), Andrew Dai's
+    code looking at PSD binning for features, 
+`meetings` directory - Added notebooks on feature discussion and length of stay (LOS)
+    data visualization.
+`tests` directory - Included some testing including 131 features from Megan's previous
+    paper to compare the results of the features translating Matlab to Python code.
+`machinelearning` directory - Examples of simple models (knn, logreg, SVM) using 
+    Pipeline objects, hyperparameter tuning with cross validation, splitting train/test
+    datasets, scoring, predicting, and reporting. The current plan is to use autosklearn
+    to build and test different ML models.
+`` directory
+
+#########################################################################################
+
+2. CIS-PD - Michael J Fox Foundation (MJFF) project with Apple watch and MC10 sensors
+
+
+#########################################################################################
+
+Notes from last meeting with Ami Drory:
+1. Plan for feature engineering before plugging into ML models.
+- Interpolate signal in the tmie domain so that each gait cycle is the same 
+  length of time.
+- If time interpoloation does not work with CVA, then use dynamic time warping (DTW).
+- DTW
+  - Need to have a constant. One idea is to warp 1 signal and maybe keep the 
+    shortest signal constant.
+  - It may not matter which is the reference signal.
+2. ML model trainnig notes
+- Discussed using healthy control (HC) trained model vs. CVA group to determine stage 
+    of recovery.
+- Discussed using CVA trained model to predict CVA classification/scoring for things 
+    like activity recognition.
+  
