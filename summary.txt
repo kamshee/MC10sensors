@@ -37,6 +37,12 @@ All Python notebooks and relevant files should be in the GitHub directory here:
 Ignore the `CIS-PD_Curation2` directory
 Nick Shawen should have the updated code in the repo and shared drive.
 
+GitHub repos:
+https://github.com/kamshee/CIS-PD_Curation
+- This one has some code I used to clean data.
+Otherwise, I added everything necessary to Nick's repo:
+https://github.com/nshawen/CIS-PD_Curation
+
 #########################################################################################
 
 Notes from last meeting with Ami Drory:
