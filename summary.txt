@@ -48,7 +48,7 @@ Notes from last meeting with Ami Drory:
   - Need to have a constant. One idea is to warp 1 signal and maybe keep the 
     shortest signal constant.
   - It may not matter which is the reference signal.
-2. ML model trainnig notes
+2. ML model training notes
 - Discussed using healthy control (HC) trained model vs. CVA group to determine stage 
     of recovery.
 - Discussed using CVA trained model to predict CVA classification/scoring for things 
